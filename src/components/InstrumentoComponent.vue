@@ -2,7 +2,7 @@
   <!-- v-if presenta los card al principio acomodados de izq a derecha -->
   <div v-if="(instrumento.nombre.toLowerCase()).includes(search.toLowerCase()) || (instrumento.categoria.toLowerCase()).includes(search.toLowerCase()) || search === '' " class="col-12  col-md-6 col-lg-3"> 
       <div class="card" style="width: 18rem;">
-          <img :src="instrumento.imagen" class="card-img-top" style="width: 18rem;" alt="...">
+          <img :src="instrumento.imagen" class="card-img-top" style="height: 20rem;" alt="...">
           <div class="card-body">
               <h5 class="card-title">Nombre: {{ instrumento.nombre }}</h5>
           </div>

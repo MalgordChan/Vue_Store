@@ -4,7 +4,7 @@ import { createRouter, createWebHashHistory } from 'vue-router';
 
 //Importando componentes
 import InicioComponent from '..//components/InicioComponent.vue';
-import ServiciosComponent from'..//components/ServiciosComponent.vue';
+import QuienesSomosComponent from "..//components/QuienesSomosComponent"
 import ContactoComponent from '..//components/ContactoComponent.vue';
 import InstrumentosComponent from '..//components/InstrumentosComponent.vue';
 
@@ -13,7 +13,7 @@ import InstrumentosComponent from '..//components/InstrumentosComponent.vue';
 //Rutas (dirección en el navegador, componente que se ejecuta)
 const routes = [
     {path:'/',component:InicioComponent},
-    {path:'/servicios', name:"servicios",component:ServiciosComponent},
+    {path:'/quienessomos', name:"quienessomos",component:QuienesSomosComponent},
     {path:'/contacto', name:'contacto', component:ContactoComponent}, 
     {path:'/instrumentos', name: "instrumentos", component:InstrumentosComponent},
     

@@ -15,7 +15,7 @@
                         <router-link class="nav-link" active-class="active" aria-current="page" to="/">Inicio</router-link>
                     </li>
                     <li class="nav-item">
-                        <router-link class="nav-link" active-class="active" to="/servicios">Servicios</router-link>
+                        <router-link class="nav-link" active-class="active" to="/quienessomos">Quienes Somos?</router-link>
                     </li>
                     <li class="nav-item">
                         <router-link class="nav-link" to="/instrumentos">Productos</router-link>
