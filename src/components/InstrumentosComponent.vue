@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+   <div class="container">
     <div class="row">
       <h2 class="text-center mt-4 text-primary">Seleccion Instrumental: Productos</h2>
       <div class="container mt-2 mb-2 justify-center align-center">
@@ -10,7 +10,7 @@
               src="../assets/imagenes/musica.png"
               class="card-img-top"
               height="200"
-              width="250"
+              width="150"
               alt="..."
             />
         </div>
@@ -18,7 +18,7 @@
     </div>
 
       <div>
-        <label for="" class="m-2 fw-bolder text-uppercase"> Busqueda por: (Nombre o Categoria) </label>
+        <label for="" class="m-2 fw-bolder text-uppercase"> Busqueda:</label>
         <input type="text" class="mb-3 fw-bold text-bg-information text-center" v-model="search">
       </div>
         <InstrumentoComponent v-for="instrumento in instrumento" :key="instrumento.id" :instrumento="instrumento" :search=search></InstrumentoComponent> <!--Actualizar props en LibroComponent-->

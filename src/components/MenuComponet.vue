@@ -15,7 +15,7 @@
                         <router-link class="nav-link" active-class="active" aria-current="page" to="/">Inicio</router-link>
                     </li>
                     <li class="nav-item">
-                        <router-link class="nav-link" active-class="active" to="/quienessomos">Quienes Somos?</router-link>
+                        <router-link class="nav-link" active-class="active" to="/servicios">Servicios</router-link>
                     </li>
                     <li class="nav-item">
                         <router-link class="nav-link" to="/instrumentos">Productos</router-link>
@@ -23,6 +23,18 @@
                     <li class="nav-item">
                         <router-link class="nav-link" to="/contacto">Contacto</router-link>
                     </li>
+                    <li class="nav-item">
+                        <router-link class="nav-link" active-class="active" to="/registro">Registro</router-link>
+                    </li>
+                    <li class="nav-item">
+                        <router-link class="nav-link" active-class="active" to="/login">Login</router-link>
+                    </li>
+                    <li class="nav-item">
+                        
+                        <button @click="logout" class="btn btn-outline-dark btn-md">Cerrar sesión</button>
+                    </li>
+
+                    
                 </ul>
                 
             </div>
@@ -32,13 +44,48 @@
 </template>
 
 <script>
+import firebase from '@/firebase'
 export default {
+    
     name: 'MenuComponent',
     
+    
 
+  data() {
+    return {
+      currentUser: null
+    }
+  },
+  created() {
+    // Escuchar cambios en el estado de autenticación del usuario
+    firebase.auth().onAuthStateChanged(user => {
+      this.currentUser = user
+    })
+  },
+  methods: {
+    async logout() {
+      try {
+        await firebase.auth().signOut()
+        // Si el cierre de sesión es exitoso, redirecciona al usuario a la página de inicio de sesión
+        this.$router.push('/login')
+        alert('Cerraste sesión')
+      } catch (error) {
+        // Si hay algún error, muestra un mensaje de error
+        alert(error.message)
+      }
+    }
+  }
 }
 </script>
 
 <style>
-
+.btn-outline-dark {
+  color: #000000;
+  border-color: #000000;
+}
+.btn-outline-dark:hover {
+  color: #ffffff;
+  background-color: #000000;
+  border-color: #000000;
+}
 </style>

@@ -4,18 +4,24 @@ import { createRouter, createWebHashHistory } from 'vue-router';
 
 //Importando componentes
 import InicioComponent from '..//components/InicioComponent.vue';
-import QuienesSomosComponent from "..//components/QuienesSomosComponent"
+import ServiciosComponent from'..//components/ServiciosComponent.vue';
 import ContactoComponent from '..//components/ContactoComponent.vue';
 import InstrumentosComponent from '..//components/InstrumentosComponent.vue';
+import RegistroComponent from '..//components/RegistroComponent.vue';
+import LoginComponent from '..//components/LoginComponent.vue';
+import AdministradorProductosComponent from '..//components/AdministradorProductosComponent.vue';
 
 
 
 //Rutas (dirección en el navegador, componente que se ejecuta)
 const routes = [
     {path:'/',component:InicioComponent},
-    {path:'/quienessomos', name:"quienessomos",component:QuienesSomosComponent},
+    {path:'/servicios', name:"servicios",component:ServiciosComponent},
     {path:'/contacto', name:'contacto', component:ContactoComponent}, 
     {path:'/instrumentos', name: "instrumentos", component:InstrumentosComponent},
+    {path:'/registro', name: "registro", component:RegistroComponent},
+    {path:'/login', name: "login", component:LoginComponent},
+    {path:'/administrador', name: "administrador", component:AdministradorProductosComponent},
     
 
 ];
